@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+naemespace:名称空间
+id:唯一查询类型
+resultType:返回类型
+com.maven.mapper.userMapper
+-->
+<mapper namespace="com.springboot.dao.EmpDao">
+    <insert id="insertEmp" parameterType="com.springboot.entity.Emp">
+        insert into emp(id,ename,joindate,salary,bouns,dep_id,job)
+        value (#{id},#{ename},#{joindate},#{salary},#{bouns},#{dep_id},#{job})
+    </insert>
+
+</mapper>
